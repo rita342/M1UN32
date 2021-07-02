@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<!--
+
+        HTML EXERCISES
+
+        1) Create a title for the page
+        2) Create a heading
+        3) Create an ordered list
+        4) Create a table with 5 columns and 4 rows
+        5) Add an image to each second cell of every row
+        6) Add a anchor link for every image
+        7) Merge together 2 table cells
+        8) Divide the page using a horizontal line
+        9) Create a container with a nested paragraph and a nested unordered list
+        10) Create a footer with some information about the page creator 
+
+        CSS EXERCISES
+
+        11) Give a maximum width to the body and center it in the page
+        12) Set every h1 to be centered
+        13) Change the color of each link in the page
+        14) Create a class with a border
+        15) Set table to have rounded corners
+        16) Add margin between every paragraph
+        17) Create a class which change font size and boldness
+        18) Create a class to hide a content
+        19) Add a green border to each td
+        20) Add a dotted red border to each tr (note: tr does not accept a border property ;-) )
+
+        JS EXERCISES
+
+        21) Given variable x = "John" and y = "Doe", write on the console log "John <> Doe"
+        22) Create an object with properties such name, surname, email
+        23) Delete Email from the previously created object
+        24) Create an array with 10 strings in it
+        25) Print in the console every string in the previous array
+        26) Create an array with 100 random numbers in it
+        27) Wrote a function to get the MAX and the MIN from the previously created array
+        28) Create an array of arrays, in which every array has 10 random numbers
+        29) Create a function that gets 2 arrays and returns the longest one
+        30) Create a function that gets 2 arrays of numbers and returns the one with the higher sum of values
+
+        DOM 
+
+        31) Get element with ID "container" from the page
+        32) Get every "td" from the page
+        33) Create a cycle that prints the text inside every td of the page
+        34) Write a function to change the heading of the page
+        35) Write a function to add an extra row to the table
+        36) Write a function to add the class "test" to each row in the table
+        37) Write a function to add a red background to every link in the page
+        38) Console log "Page loaded" when the page is correctly loaded
+        39) Write a function to add new items to a UL
+        40) Write a function to empty a list
+
+        EXTRA 
+
+        41) Add an eventListener to alert when the mouse is over a link, displaying the URL
+        42) Add a button to hide every image on the page
+        43) Add a button to hide and show the table from the page
+        44) Write a function to sum every number inside the TD (if the content is numeric)
+        45) Delete the last letter from the title each time the user clicks on it
+        46) Change a single TD background color when the user clicks on it
+        47) Add a button DELETE, on click it should delete a random TD from the page
+        48) Add a pink border to a cell when the mouse is over it
+        49) Write a function to add a table with 4 rows and 3 columns programmatically
+        50) Write a function to remove the table from the page
+    -->
+<style>
+    body {
+        max-width: 70%;
+        margin-left: 15%;
+    }
+    
+    h1 {
+        text-align: center;
+        font-size: 40px;
+    }
+    
+    a {
+        color: green;
+    }
+    
+    h1 {
+        border-style: double;
+    }
+    
+    table {
+        border-radius: 50px;
+        width: 100%;
+    }
+    
+    p {
+        margin: 20px;
+        font-size: 24px;
+        font: bolder;
+    }
+    
+    .hidden {
+        visibility: hidden;
+    }
+    
+    td {
+        border: 1px solid #00ff22;
+    }
+    
+    tr {
+        border-style: dotted;
+    }
+</style>
+
+<head>
+    <title>This is My Story</title>
+
+</head>
+
+<body>
+    <h1 id="myHeader">Little of me</h1>
+    <ul class="hidden">
+        <li>
+            dream
+        </li>
+        <li>
+            take the image
+        </li>
+        <li>
+            try your best
+        </li>
+    </ul>
+    <table id="table" border="1">
+        <tr>
+            <td>&nbsp;</td>
+            <td>
+                <a href="https://www.google.com/search?q=FRUIT+IMAGE&safe=active&client=firefox-b-d&sxsrf=ALeKk02vNlPFi_13fKQZV7fmAK9LM3nX2A:1625231004043&tbm=isch&source=iu&ictx=1&fir=iOYuEHqCO4bm8M%252ChyYOp6bl8HreHM%252C_&vet=1&usg=AI4_-kQx9Upu9SNlr8Xf_Iv0JScvqOoAzw&sa=X&ved=2ahUKEwiAxbGlucTxAhWsw4sKHRFnATAQ9QF6BAgOEAE&biw=1366&bih=614#imgrc=iOYuEHqCO4bm8M"><img src="https://images.pexels.com/photos/1132047/pexels-photo-1132047.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" style="width:100px;height:50px"></img>
+                </a>
+            </td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>
+                <a href="https://www.google.com/search?q=COFFEE+DRINK+IMAGE&safe=active&client=firefox-b-d&sxsrf=ALeKk03akr7cW-DVCe-aG5jpLiKEMgCbPA:1625231226236&tbm=isch&source=iu&ictx=1&fir=1n0xkVmztcgKlM%252ChmdqAJQUU7YqxM%252C_&vet=1&usg=AI4_-kSOCzgemxK4dq4JT2V4fy4dtOG8ZQ&sa=X&ved=2ahUKEwj7g6uPusTxAhXvkYsKHSTeArUQ9QF6BAgLEAE&biw=1366&bih=614#imgrc=1n0xkVmztcgKlM"><img src="data:image/jpeg;base64,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"
+                        style="width:100px; height:50px"></img>
+                </a>
+            </td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>
+                <a href="https://www.google.com/search?q=WATER+IMAGE&safe=active&client=firefox-b-d&sxsrf=ALeKk00YE-IllCkBc34sqCPCsod2kCEfxA:1625231420586&tbm=isch&source=iu&ictx=1&fir=gzJulCR9sUB5mM%252CBUJitG_bEJQZuM%252C_&vet=1&usg=AI4_-kRHe8tksOuc_4UXjzDiTPEKhPIQcg&sa=X&ved=2ahUKEwjdqYHsusTxAhXBlYsKHcJfAPYQ9QF6BAgQEAE&biw=1366&bih=614#imgrc=gzJulCR9sUB5mM"><img src="data:image/jpeg;base64,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"
+                        style="width:100px; height:50px"></img>
+                </a>
+            </td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>
+                <a href="https://www.google.com/search?q=chocolate+image&safe=active&client=firefox-b-d&sxsrf=ALeKk03iQYU1Y5p-9p6IL72b6UPkjYQAIg:1625231660423&tbm=isch&source=iu&ictx=1&fir=jhj9IBHA0s-xNM%252CrA4LaKaMQg5C5M%252C_&vet=1&usg=AI4_-kQ5odu9EoqbpCCDq7LcBxPmBuGfZA&sa=X&ved=2ahUKEwjggrDeu8TxAhVOlYsKHatlAbgQ9QF6BAgREAE&biw=1366&bih=614#imgrc=jhj9IBHA0s-xNM"><img src="https://media.istockphoto.com/photos/chocolate-pieces-picture-id1136447014?k=6&m=1136447014&s=612x612&w=0&h=Txx3EdMGQGSOFNTwv3jqNK_sQNd5SpenA4hV5qIc2MA=" style="width:100px;height:50px"></img>
+                </a>
+            </td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+    </table>
+    <hr size="2" noshade,>
+    <div class="container">
+        <div class="row">
+            <p>This is a paragraph</p>
+            <p>This is a paragraph</p>
+            <p>This is a paragraph</p>
+            <ul id="hidden">
+                <li>the first one</li>
+                <li>the second one</li>
+                <li>the third one</li>
+            </ul>
+        </div>
+    </div>
+</body>
+<footer>
+    <div>
+        <p>this girl is going anywhere</p>
+    </div>
+</footer>
+
+</html>
+<script>
+    //21) Given variable x = "John" and y = "Doe", write on the console log "John <> Doe" 
+    let x = "john"
+    let y = "Doe"
+    console.log(x, "<>:", y)
+
+    // 22) Create an object with properties such name, surname, email
+    object = {
+            name: "rahel",
+            surname: "woticha",
+            email: "ryohannes83@gmail.com"
+        }
+        // 23) Delete Email from the previously created object
+    delete object.email;
+    console.log(object.email)
+        // 24) Create an array with 10 strings in it
+    const home = ["apple", "orange", "banana", "avocado", "pen", "pencil", "bed", "table", "phone", "window"];
+    //25) Print in the console every string in the previous array
+    console.log(home[0])
+    console.log(home[1])
+    console.log(home[2])
+    console.log(home[3])
+    console.log(home[4])
+    console.log(home[5])
+    console.log(home[6])
+    console.log(home[7])
+    console.log(home[8])
+    console.log(home[9])
+        // 26) Create an array with 100 random numbers in it
+
+
+
+    //27) Wrote a function to get the MAX and the MIN from the previously created array
+    //28) Create an array of arrays, in which every array has 10 random numbers
+    let arr = [];
+    for (let i = 0; i < 7; i++) {
+        let full = [];
+        for (let j = 0; j < 10; j++)
+            full.push(Math.floor(Math.random() * 10));
+        arr.push(full);
+    }
+    console.log(arr)
+        // 29) Create a function that gets 2 arrays and returns the longest one
+    function longestarray(arr) {
+        let longest = arr[0];
+        for (let i = 1; i < arr.length; i++) {
+            if (arr[i].length > longest.length) {
+                longest = arr[i];
+            }
+        }
+        return longest;
+    }
+
+    console.log(long_string(arr));
+    // 30) Create a function that gets 2 arrays of numbers and returns the one with the higher sum of values
+
+    var numbers1 = []
+    var numbers2 = []
+
+    var sum1 = 0;
+    var sum2 = 0;
+
+    function sumArray(arr1, arr2) {
+        for (var i = 0; i < (numbers1.length, numbers2.length); i++) {
+
+            sum1 += numbers1[i]
+            sum12 += numbers2[i]
+            if (sum1 > sum2) {
+                console.log("number1 hasis greater sum")
+            } else {
+                console.log("number2 hasis greater sum")
+            }
+
+            sumArray()
+                // 31) Get element with ID "container" from the page
+            document.getElementById('myHeader')
+                //32) Get every "td" from the page
+            document.querySelectorAll('td')
+                //  33) Create a cycle that prints the text inside every td of the page
+                // 34) Write a function to change the heading of the page
+            const changeheading = function(newheading) {
+                const head = document.querySelector("h1");
+                head.innerText = "new heading";
+
+            }
+            changeheading("newheading");
+            // 35) Write a function to add an extra row to the table
+            function insertnewrow() {
+                var newRow = document.getElementById('table').insertRow();
+
+                newRow.innerHTML = "<td>New row text</td><td>New row 2nd cell</td>";
+                // 36) Write a function to add the class "test" to each row in the table
+                // 37) Write a function to add a red background to every link in the page
+                // 38) Console log "Page loaded" when the page is correctly loaded
+                function createMenuItem(name) {
+                    let li = document.createElement('li');
+                    li.textContent = name;
+                    return li;
+
+                    const menu = document.querySelector('#hidden');
+
+                    menu.appendChild(createMenuItem('truth'));
+
+                    // 40) Write a function to empty a list
+                    function removeAll() {
+                        document.getElementsByTagName("li").innerHTML = "";
+
+
+                    }
+</script>
